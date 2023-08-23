@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: "Poppins";
+}
+.home-header{
+    background:linear-gradient(transparent, rgba(33, 8, 8, 0.877)), url('./images/header-bg.png') fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.bg-red{
+    background-color: #EB2929;
+}
+.text-red{
+    color: #EB2929;
+}
+.text-deep-blue{
+    color: #192F60;
+}
+.text-ash{
+    color: #8C96AB
+}
+.login-btn{
+    background-color: transparent !important;
+    border: none !important;
+}
+.logo{
+    width: 147px;
+    height: 147px;
+    border-radius: 50%;
+    font-size: 80px;
+    font-weight: bolder;
+}
+.search-group{
+    width: 60%;
+    margin-bottom: 81px;
+    display: flex;
+}
+.location-input{
+    width: 30%;
+    height: 60px;
+}
+.search-input{
+    width: 60%;
+    height: 60px;
+}
+input[type="text"]{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+.search-input span{
+    height: 98%;
+}
+.main-content{
+    margin: 48px auto;
+
+}
+.main-content h2{
+    font-weight: bolder;
+}
+.menu{
+    height: 160px;
+    width: 350px !important;
+    cursor: pointer;
+}
+.menu img{
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+}
+.menu article h3{
+    font-weight: bold;
+    font-size: 18px;
+}
+.menu article p{
+    font-size: 14px;
+}
+@media screen and (max-width: 640px) {
+    .home-header{
+        background:linear-gradient(transparent, rgba(33, 8, 8, 0.877)), url('./images/header-bg.png') fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .logo{
+        margin-top: 60px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        font-size: 40px;
+        font-weight: bolder;
+    }
+    .search-group{
+        width: 95% !important;
+        margin-bottom: 81px;
+    }
+    .search-input{
+        width: 100% !important;
+        height: 60px;
+    }
+    .location-input{
+        width: 100% !important;
+    }
+    
+}

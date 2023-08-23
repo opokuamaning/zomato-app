@@ -1,0 +1,78 @@
+.main-bg {
+  width: 85%;
+  height: 50vh !important;
+}
+.restaurant-image-div {
+  position: relative;
+}
+
+.btn-gallery {
+  position: absolute;
+  background-color: #ffffffc9;
+  width: 242px;
+  height: 48px;
+  bottom: 0;
+  right: 0;
+  margin: 20px 27px;
+  border-radius: 5px;
+  border: none;
+}
+.main-content{
+    width: 85%;
+}
+.main-content nav button{
+    background-color: #CE0505;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+hr{
+  width: 98% !important;
+}
+.btn-add-menu, .btn-qty{
+  background-color: white !important;
+  color: forestgreen !important;
+  text-transform: uppercase;
+  transform: translateY(-50%);
+  width: 70%;
+  height: 40px;
+  margin: 0 auto;
+  border: none;
+  box-shadow: 0 0 5px grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-qty{
+  width: 30%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg-red{
+  background-color: #CE0505 !important;
+}
+@media  screen and (max-width: 640px) {
+    .main-bg{
+        margin-top: 10px !important;
+        width: 100%;
+        height: 35vh !important;
+    }
+    .restaurant-image-div img{
+        padding-left: 0;
+        padding-right: 0;
+        object-fit: fill !important;
+        height: auto !important;
+    }
+    .main-content{
+      width: 100%;
+    }
+    .main-content nav{
+      font-size: small;
+      
+    }
+    hr{
+      width: 95% !important;
+    }
+}

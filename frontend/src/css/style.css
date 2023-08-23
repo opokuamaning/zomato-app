@@ -1,0 +1,39 @@
+
+.header-text-color{
+  color: #192f60;
+}
+.restaurant-image{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.my-pagination{
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.my-pagination-items{
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 1px solid grey;
+  margin: 5px;
+  color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.active{
+  background-color: gray;
+  color: white;
+}
+.my-shadow{
+  /* x-axis y-axis blur color */
+  box-shadow: 0 0 5px gray;
+}
+input[type="radio"], input[type="checkbox"]{
+  accent-color: #192f60 !important;
+}
