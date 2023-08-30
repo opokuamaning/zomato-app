@@ -41,10 +41,12 @@ const RestaurantDetails = () => {
         setTotalPrice(totalPrice);
     }
     let [totalPrice, setTotalPrice] = useState(0);
+
+   
     let getPaymentView = async () => {
         const url = "http://localhost:3070/api/create-order";
         let result = await axios.post(url, { amount: totalPrice });
-        console.log(result.data.order.id)
+        //console.log(result.data.order.id)
         let options = {
             "key": "rzp_test_RB0WElnRLezVJ5", // Enter the Key ID generated from the Dashboard
             "amount": totalPrice * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise

@@ -59,6 +59,7 @@ const Search = () => {
     }
     setFilter(_filter);
   };
+  
   useEffect(() => {
     getLocationList();
   }, []);
@@ -68,6 +69,23 @@ const Search = () => {
   // useEffect(()=>{
   //   getFilterDetails()
   // }, [filter])
+  const [restPages, setRestPages] = useState(2);
+  const [currentPage, setCurrentPage] = useState(1)
+  const numOfTotalPages = Math.ceil(restaurantList.length / restPages);
+  const pages = [...Array(numOfTotalPages + 1).keys()].slice(1);
+  const indexOfLastRest = currentPage * restPages;
+  const indexOfFirstRest = indexOfLastRest - restPages;
+
+  const visibleRest = restaurantList.slice(indexOfFirstRest, indexOfLastRest )
+  console.log(pages)
+
+  const prevPageHandler = ()=>{
+    if(currentPage !== 1)setCurrentPage(currentPage - 1)
+  }
+  const nextPageHandler = ()=>{
+    if(currentPage !== numOfTotalPages) setCurrentPage(currentPage + 1)
+  }
+
   return (
     <>
       <Header />
@@ -261,7 +279,7 @@ const Search = () => {
             </section>
             {/* Restaurant */}
             <section className="col-12 col-lg-8 px-0 px-lg-3">
-              {restaurantList.map((restaurant, index) => {
+              {visibleRest.map((restaurant, index) => {
                 return (
                   <section
                     key={restaurant._id}
@@ -308,12 +326,13 @@ const Search = () => {
               {/* Pagination */}
               <section className="d-flex justify-content-center">
                 <ul className="my-pagination">
-                  <li className="my-pagination-items">&lt;</li>
-                  <li className="my-pagination-items active">1</li>
-                  <li className="my-pagination-items">2</li>
-                  <li className="my-pagination-items">3</li>
-                  <li className="my-pagination-items">4</li>
-                  <li className="my-pagination-items">&gt;</li>
+                  <li className="my-pagination-items" onClick={prevPageHandler}>&lt;</li>
+                  {
+                    pages.map((page, index)=>{
+                      return <li className={`my-pagination-items ${currentPage === page ? 'active' : ""}`} key={index} onClick={()=>{setCurrentPage(page)}}>{page}</li>
+                    })
+                  }
+                  <li className="my-pagination-items" onClick={nextPageHandler}>&gt;</li>
                 </ul>
               </section>
             </section>
